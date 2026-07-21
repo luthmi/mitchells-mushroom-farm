@@ -10,27 +10,25 @@
 <style>
   :root{--wood:#5a3d23;--cream:#f2e8c9;--gold:#e8b840;--teal:#4fd8c8;}
   *{box-sizing:border-box;}
-  html,body{margin:0;padding:0;width:100%;height:100%;background:#000;overflow:hidden;}
+  html,body{margin:0;padding:0;width:100%;height:100%;background:#000;}
   body{font-family:'Press Start 2P',monospace;color:var(--cream);background:#000;
-    display:flex;align-items:center;justify-content:center;}
-  /* everything scales to the smaller of the two viewport dims so it always fits a square */
-  #wrap{width:100%;height:100%;max-width:100vh;max-height:100vw;
-    padding:2.2vmin;display:flex;flex-direction:column;gap:1.6vmin;}
-  #marquee{width:100%;display:block;margin:0 auto;flex:0 0 auto;
-    max-height:16vmin;object-fit:contain;filter:drop-shadow(0 1vmin 2vmin rgba(0,0,0,.7));}
-  #cabs{flex:1 1 auto;display:grid;gap:1.6vmin;min-height:0;
+    height:100vh;display:flex;flex-direction:column;padding:14px;gap:12px;overflow:hidden;}
+  #marquee{width:auto;height:13%;max-height:104px;display:block;margin:0 auto;flex:0 0 auto;
+    object-fit:contain;filter:drop-shadow(0 6px 16px rgba(0,0,0,.7));}
+  #cabs{flex:1 1 auto;display:grid;gap:11px;min-height:0;
     grid-template-columns:1fr 1fr;
-    grid-template-rows:1.3fr 1fr 1fr 1fr;}
-  a.cab{display:block;position:relative;text-decoration:none;border:0.5vmin solid var(--wood);
-    border-radius:1.6vmin;overflow:hidden;background:#0a0a0a;min-height:0;min-width:0;
-    box-shadow:0 0.7vmin 0 #000, inset 0 0 3vmin rgba(0,0,0,.5);}
+    grid-template-rows:0.9fr 1fr 1fr 1fr;}
+  a.cab{position:relative;text-decoration:none;border:3px solid var(--wood);
+    border-radius:11px;overflow:hidden;background:#0a0a0a;min-height:0;min-width:0;
+    box-shadow:0 4px 0 #000, inset 0 0 20px rgba(0,0,0,.4);}
   a.cab.wide{grid-column:1/-1;grid-row:1;}
   a.cab img{width:100%;height:100%;object-fit:cover;display:block;}
-  a.cab:active{transform:translateY(0.4vmin);}
+  a.cab:active{transform:translateY(2px);box-shadow:0 2px 0 #000;}
   a.cab .best{position:absolute;left:0;right:0;bottom:0;
-    font-size:1.7vmin;color:var(--teal);letter-spacing:0.2vmin;text-align:center;
-    padding:0.8vmin 0.4vmin;background:linear-gradient(rgba(0,0,0,0),rgba(0,0,0,.92) 55%);
+    font-size:8px;color:var(--teal);letter-spacing:1px;text-align:center;
+    padding:5px 4px;background:linear-gradient(rgba(0,0,0,0),rgba(0,0,0,.9) 58%);
     text-shadow:0 1px 2px #000;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+  #wrap{display:contents;}
   #foot{display:none;}
 </style>
 </head>
